@@ -1,0 +1,79 @@
+Metadata-Version: 1.0
+Name: PGHM
+Version: 1.0
+Summary: Phylogenetic heatmaps highlight composition biases in sequenced reads.
+Home-page: http://grigoriev.rutgers.edu/software/PGHM
+Author: Sulbha Choudhari & Andrey Grigoriev
+Author-email: agrigoriev@camden.rutgers.edu 
+License: UNKNOWN
+Description: PGHM, Version 1.0
+        
+        Installation and Usage
+        
+        
+        INSTALLATION
+        
+        python setup.py install
+        
+        
+        DEPENDENCIES
+        
+        matplotlib
+        NumPy
+        
+        
+        
+        
+        USAGE
+        
+        PGHM is intended to be easy to use. For typical usage for comparing two samples, PGHM requires 4 input parameters:
+        
+        1) Sequences file from two samples, each sequence classified into a phylogenetic group (see test.fasta file for format)
+        2) Accession Number of sample 1
+        3) Accession Number of sample 2
+        3) Output phylogenetic heatmap figure file 
+        
+        The sequences from the two samples are classified into four phylogenetic groups and combined together in one file.
+        The file is sorted.
+        
+        Example using the test data,
+        
+        ./PGHM.py -i test.fasta -1 SRR10000000 -2 SRR20000000 -o figure
+        
+        
+        test.fasta format:
+        
+        >SRR10000000	Actinobacteria
+        ACGGAGGATCCGAGCGTTATCCGGATTTATTGGGTTTAAAGGGAGCGTAG
+        >SRR10000000	Actinobacteria
+        ACGTAGGGGGCGAGCGTTATCCGGATTCATTGGGCGTAAAGCGCGCGTAG
+        >SRR10000000	Bacteroidetes
+        TCCGAGCGTTATCCGGATTTATTGGGTTTAAAGGGAGCGTAGATGGATGT
+        >SRR10000000	Bacteroidetes
+        ACGGGGGATACGAGCGTTATCCGGATTTATTGGGTTTAAAGGGCGCGTAG
+        >SRR10000000	Firmicutes
+        ACGTAGGTCCCGAGCGTTGTCCGGATTTATTGGGTGTAAAGCGAGCGCAG
+        >SRR10000000	Firmicutes
+        ACGTAGGTCCCGAGCGTTGTCCGGATTTATTGGGCGTAAAGCGAGCGCAG
+        >SRR10000000	Proteobacteria
+        ACGTAGGGTGCAAGCGTTAATCGGAATTACTGGGCGTAAAGCGTGCGCAG
+        >SRR10000000	Proteobacteria
+        ACGTAGGTGGCAAGCGTTGTCCGGAATTATTGGGCGTAAAGAGCATGTAG
+        >SRR20000000	Actinobacteria
+        GGAATTAGTTGGGCGTAAAGGGCTCGTAGGCGGTTCGTCGCGTCCGGTGT
+        >SRR20000000	Actinobacteria
+        GATTTACGTGGGCGTAAAGGGCTCGTAGGCGGTTCGTCGCGTCCGGTGTG
+        >SRR20000000	Bacteroidetes
+        TATCCGGATTTATGGGTTTAAAGGGTGCGTAGGCGGTTTATTAAGTTAGT
+        >SRR20000000	Bacteroidetes
+        TCCGGATTTATTGGGTTTAAAGGGTGCGTAGGCGGTTTGATAAGTTAGAG
+        >SRR20000000	Firmicutes
+        GGATTTGCTGGGTGTAAAGGGAGCGTAGACGGCGAAGCAAGTCTGAAGTG
+        >SRR20000000	Firmicutes
+        GATTTACTGGGTGTAAAGGGAGCGTAGACGGAGTGGCAAGTCTGATGTAG
+        >SRR20000000	Proteobacteria
+        GGAATTACTGGGCGTAAAAGCGCACGCAGGCGGTCTGTCAAGTCGGATGT
+        >SRR20000000	Proteobacteria
+        GGAATTACTGGGCGTAAAGCGTGCGCAGGCGGTTCTGTAAGACAGATGTG
+        
+Platform: any
