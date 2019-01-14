@@ -32,3 +32,5 @@ Example using the test data,
 
 ./PGHM.py -i test.fasta -1 SRR10000000 -2 SRR20000000 -o figure
 
+## Figure
+![figure](https://user-images.githubusercontent.com/44556007/51094474-553d2e80-177b-11e9-94a6-2db57f0cc72b.png)
